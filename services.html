@@ -31,11 +31,85 @@
         <div class="row text-center mb-3">
           <div class="row">
             <h2 class="text-light">Service</h2>
-            <p class="text-light">Here is some services that exist in Pesona Bali Residence. !</p>
+            <p class="text-light">Here are some services that exist in Pesona Bali Residence.</p>
           </div>
         </div>
       </div>
     </section>
+
+    <div class="container" id="service-cards">
+      <!-- Cards will be inserted here by JavaScript -->
+    </div>
+
+    <script>
+      // List of services
+      const services = [
+        {
+          title: 'Service One',
+          description: 'Description for service one.',
+          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtySMPd0pbo5jRYrSpvl0iDsaXYdBZTAtqvLD-2cVEImuMj6q4',
+          link: '#'
+        },
+        {
+          title: 'Service Two',
+          description: 'Description for service two.',
+          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtySMPd0pbo5jRYrSpvl0iDsaXYdBZTAtqvLD-2cVEImuMj6q4',
+          link: '#'
+        },
+        {
+          title: 'Service One',
+          description: 'Description for service one.',
+          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtySMPd0pbo5jRYrSpvl0iDsaXYdBZTAtqvLD-2cVEImuMj6q4',
+          link: '#'
+        },
+        {
+          title: 'Service Two',
+          description: 'Description for service two.',
+          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtySMPd0pbo5jRYrSpvl0iDsaXYdBZTAtqvLD-2cVEImuMj6q4',
+          link: '#'
+        },
+        {
+          title: 'Service One',
+          description: 'Description for service one.',
+          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtySMPd0pbo5jRYrSpvl0iDsaXYdBZTAtqvLD-2cVEImuMj6q4',
+          link: '#'
+        },
+        {
+          title: 'Service Two',
+          description: 'Description for service two.',
+          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtySMPd0pbo5jRYrSpvl0iDsaXYdBZTAtqvLD-2cVEImuMj6q4',
+          link: '#'
+        },
+      ];
+
+      // Function to create card HTML
+      function createCard(service) {
+        return `
+          <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-4 position-relative p-3">
+                <img src="${service.image}" class="img-fluid" alt="Card image">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">${service.title}</h5>
+                  <p class="card-text">${service.description}</p>
+                  <a href="${service.link}" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Get the container element
+      const container = document.getElementById('service-cards');
+
+      // Generate the cards and insert them into the container
+      services.forEach(service => {
+        container.innerHTML += createCard(service);
+      });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
