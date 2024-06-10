@@ -11,6 +11,14 @@
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css" />
     <link href="http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,700" rel="stylesheet" type="text/css" />
+
+    <style>
+      .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: 200px;
+      }
+    </style>
   </head>
   <body data-spy="scroll" data-target="#navbar-scroll">
     <!-- Navbar -->
@@ -30,8 +38,8 @@
       <div class="container">
         <div class="row text-center mb-3">
           <div class="row">
-            <h2 class="text-light">Service</h2>
-            <p class="text-light">Here are some services that exist in Pesona Bali Residence.</p>
+            <h2 class="text-light">Product</h2>
+            <p class="text-light">Here are some Products that exist in Pesona Bali Residence.</p>
           </div>
         </div>
       </div>
@@ -45,40 +53,52 @@
       // List of services
       const services = [
         {
-          title: 'Service One',
-          description: 'Description for service one.',
-          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtySMPd0pbo5jRYrSpvl0iDsaXYdBZTAtqvLD-2cVEImuMj6q4',
-          link: '#'
+          title: 'Pempek Bekawan',
+          description: 'Pempek Bekawan adalah restoran khas Palembang yang menyajikan berbagai jenis pempek lezat dan autentik. Dengan resep tradisional yang turun-temurun, Pempek Bekawan menawarkan rasa asli Palembang dalam setiap gigitan. Kami menggunakan bahan-bahan segar dan berkualitas tinggi untuk memastikan kepuasan setiap pelanggan. Dari pempek kapal selam hingga pempek lenjer, setiap hidangan dipersiapkan dengan penuh cinta dan keahlian. Nikmati juga aneka saus cuko yang khas, pedas, dan nikmat, yang menjadi pelengkap sempurna untuk pempek kami. Kunjungi Pempek Bekawan dan rasakan sendiri kenikmatan pempek asli Palembang di sini!.',
+          image: 'https://lh5.googleusercontent.com/p/AF1QipNk2GnMlf3uElIl0r5AqiWTqwF1w8CS-vvMQ1jz=w217-h160-k-no',
+          link: 'https://maps.app.goo.gl/gqiGKFyj3MNg7t7p7'
         },
         {
-          title: 'Service Two',
-          description: 'Description for service two.',
-          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtySMPd0pbo5jRYrSpvl0iDsaXYdBZTAtqvLD-2cVEImuMj6q4',
-          link: '#'
+          title: 'Ayam Djogja Jayanti',
+          description: 'Ayam Djogja Jayanti adalah restoran yang menyajikan masakan khas Yogyakarta, khususnya ayam dengan cita rasa tradisional yang autentik. Kami bangga menghadirkan berbagai hidangan ayam yang menggugah selera, mulai dari ayam bakar, ayam goreng, hingga ayam geprek dengan sambal khas yang pedas dan nikmat. Dengan menggunakan resep turun-temurun dan bahan-bahan segar berkualitas tinggi, setiap hidangan di Ayam Djogja Jayanti diolah dengan penuh keahlian dan kasih sayang. Nikmati pengalaman kuliner Yogyakarta yang otentik dan lezat hanya di Ayam Djogja Jayanti!',
+          image: 'https://lh3.googleusercontent.com/p/AF1QipPMFHBnLH5m6_41yu9ofVvofywpZZKpe3TSKzI8=s1360-w1360-h1020',
+          link: 'https://maps.app.goo.gl/gggbysx5noWxqYrc8'
         },
         {
-          title: 'Service One',
-          description: 'Description for service one.',
-          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtySMPd0pbo5jRYrSpvl0iDsaXYdBZTAtqvLD-2cVEImuMj6q4',
-          link: '#'
+          title: 'Kedai Pesona',
+          description: 'Kedai Pesona adalah destinasi kuliner yang sempurna bagi para pecinta bakmie. Kami mengkhususkan diri dalam menyajikan berbagai jenis bakmie yang autentik dan lezat, dengan cita rasa yang khas dan memikat. Dari bakmie ayam hingga bakmie seafood, setiap hidangan di Kedai Pesona dibuat dengan bahan-bahan segar dan resep tradisional yang sudah teruji. Kami berkomitmen untuk memberikan pengalaman makan yang memuaskan dengan porsi yang melimpah dan harga yang terjangkau. Kunjungi Kedai Pesona dan nikmati bakmie yang mempesona, hanya di sini!',
+          image: 'https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/e6a37301-3a59-4710-9514-9fcf62742b74.jpg?auto=format',
+          link: 'https://maps.app.goo.gl/tESsde4JtvfYuYhd6'
         },
         {
-          title: 'Service Two',
-          description: 'Description for service two.',
-          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtySMPd0pbo5jRYrSpvl0iDsaXYdBZTAtqvLD-2cVEImuMj6q4',
-          link: '#'
+          title: 'Warkop Pojok',
+          description: 'Warkop Pojok adalah tempat nongkrong yang asik dan nyaman, menyajikan berbagai macam kopi dan camilan khas Indonesia. Berlokasi strategis di sudut kota, Warkop Pojok menjadi tempat favorit untuk bersantai, berkumpul, dan menikmati suasana yang hangat dan ramah. Dengan menu kopi yang beragam, mulai dari kopi tubruk, kopi susu, hingga kopi kekinian, serta aneka camilan seperti gorengan, roti bakar, dan mie instan, Warkop Pojok menawarkan pengalaman kuliner yang tak terlupakan. Nikmati momen kebersamaan dengan teman dan keluarga di Warkop Pojok, tempat dimana rasa dan cerita bertemu.',
+          image: 'https://dzglkev4c34xb.cloudfront.net/horego.com/bojongsoang/restaurant/kedai-tante-santi/ambience/thumbnail/af1qipphc8fqiablziqvc5_e2k5qqhh-_mkhzoirnbze.jpg',
+          link: 'https://maps.app.goo.gl/qCMypD8mvu3GNddc8'
         },
         {
-          title: 'Service One',
-          description: 'Description for service one.',
-          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtySMPd0pbo5jRYrSpvl0iDsaXYdBZTAtqvLD-2cVEImuMj6q4',
-          link: '#'
+          title: 'Nomar Kopi Togo',
+          description: 'Nomar Kopi Togo adalah kafe yang menghadirkan pengalaman unik dengan konsep kopi untuk dibawa pulang (takeaway). Kami menawarkan berbagai pilihan kopi berkualitas tinggi, mulai dari espresso, latte, cappuccino, hingga kopi spesial dengan berbagai varian rasa dan topping. Di Nomar Kopi Togo, Anda dapat menikmati kopi favorit Anda dalam kemasan praktis untuk dinikmati di mana pun Anda berada. Selain itu, kami juga menyediakan pilihan camilan ringan yang cocok untuk menemani secangkir kopi Anda. Kunjungi Nomar Kopi Togo untuk merasakan kopi berkualitas tinggi dalam kemasan yang praktis dan nyaman!',
+          image: 'https://lh3.googleusercontent.com/p/AF1QipPYwWp8-AjVoxp-3QFYze62zUw78wSBGJwJjAWi=s1360-w1360-h1020',
+          link: 'https://maps.app.goo.gl/72gpLe8HSe4uJXTp6'
         },
         {
-          title: 'Service Two',
-          description: 'Description for service two.',
-          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtySMPd0pbo5jRYrSpvl0iDsaXYdBZTAtqvLD-2cVEImuMj6q4',
-          link: '#'
+          title: 'Kupat Sayur Padang',
+          description: 'Kupat Sayur Padang adalah hidangan tradisional khas Padang yang terdiri dari ketupat atau kupat (nasi yang dibungkus dengan daun kelapa) yang disajikan dengan kuah bening khas Padang. Kuahnya biasanya terbuat dari santan yang kaya rempah, seperti kunyit, lengkuas, dan daun salam, yang memberikan cita rasa yang khas dan gurih. Di dalamnya terdapat aneka sayuran seperti tauge, kacang panjang, daun singkong, serta potongan telur rebus dan kerupuk sebagai pelengkap. Kupat Sayur Padang sering disajikan dengan sambal lado mudo atau sambal hijau khas Padang untuk tambahan rasa pedas dan segar. Ini adalah hidangan yang sangat cocok dinikmati sebagai sarapan atau makan siang, mencerminkan kekayaan rasa kuliner dari Sumatra Barat.',
+          image: 'https://assets-pergikuliner.com/3s1lxPrFyr5Fh9G8OhQ6CYrwpnA=/fit-in/1366x768/smart/filters:no_upscale()/https://assets-pergikuliner.com/uploads/image/picture/2569748/picture-1658732709.jpg',
+          link: 'https://maps.app.goo.gl/ctu2WrGhFmAc39UVA'
+        },
+        {
+          title: 'Soto Ayam Radit',
+          description: 'Soto Ayam Radit adalah hidangan soto ayam khas Indonesia dengan sentuhan khas dari Radit. Soto ayam ini terkenal dengan kuahnya yang kaya rempah, biasanya terbuat dari kaldu ayam yang gurih dan beraroma, disajikan dengan potongan daging ayam yang lembut, tauge, daun seledri, bawang goreng, dan irisan telur rebus. Soto Ayam Radit sering disajikan dengan tambahan kerupuk, sambal, serta potongan jeruk nipis yang memberikan cita rasa segar dan kaya akan rempah-rempah. Ini adalah hidangan yang populer dan cocok dinikmati kapan saja, baik sebagai sarapan, makan siang, atau makan malam, menawarkan pengalaman kuliner yang autentik dan lezat dari Indonesia.',
+          image: 'https://lh3.googleusercontent.com/p/AF1QipORiUM6DQQXYZg5Uh6NR9fd4PeCjMmoB6jvKwDH=s1360-w1360-h1020',
+          link: 'https://maps.app.goo.gl/cAVsDE9BWbGneiYy9'
+        },
+        {
+          title: 'Aroma Kahuripan',
+          description: 'Aroma Kahuripan Coffee Shop adalah tempat yang ideal untuk menikmati kopi berkualitas tinggi dengan suasana yang nyaman dan santai. Kami menyajikan berbagai varian kopi mulai dari espresso, cappuccino, hingga kopi spesial dengan sentuhan khas. Selain kopi, Aroma Kahuripan juga menawarkan pilihan minuman lain seperti teh dan smoothies, serta camilan ringan yang cocok untuk menemani minuman Anda. Nikmati suasana hangat dan ramah di Aroma Kahuripan, tempat yang sempurna untuk berkumpul, bekerja, atau sekadar bersantai sambil menikmati kopi favorit Anda.',
+          image: 'https://lh3.googleusercontent.com/p/AF1QipM2karoac4bAtfy8wPz7k6U6nifk8TrsHp5R1BW=s1360-w1360-h1020',
+          link: 'https://maps.app.goo.gl/zk7epWm3p6NSGrpt5'
         },
       ];
 
@@ -87,14 +107,14 @@
         return `
           <div class="card mb-3">
             <div class="row g-0">
-              <div class="col-md-4 position-relative p-3">
+              <div class="col-md-4">
                 <img src="${service.image}" class="img-fluid" alt="Card image">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title">${service.title}</h5>
                   <p class="card-text">${service.description}</p>
-                  <a href="${service.link}" class="btn btn-primary">Go somewhere</a>
+                  <a href="${service.link}" target="_blank" class="btn btn-primary">Google Maps</a>
                 </div>
               </div>
             </div>
